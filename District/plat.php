@@ -6,18 +6,7 @@ $db = connexionBase();
 
 // requetes lancer via le dao
 
-
-
-
-// dans le [] nom indiquer aprés le lien internet
-
-
-// limit donne le nombre d'image mis sur la pagination
-
-
-// la commande LIMIT permet de spécifier le nombre maximum de résultats que l’on souhaite obtenir, tandis que la commande OFFSET permet d'effectuer un décalage sur l'ensemble des résultats. Un cas d'utilisation courant consiste à utiliser ces commandes dans le cadre du développement d'une pagination.
-
-
+$platalls = getPlatall();
 
 
 
@@ -39,8 +28,23 @@ include_once "Template/nav.php";
         </div>
 
 
+        <?php foreach ($platalls as $platall) :
+        ?>
+            <div class="col-4">
+
+                <img src="assets/images/food/<?= $platall->image ?>" width="300" height="350" alt="" class="arrondie">
+                <h3><?= $platall->libelle ?></h3>
+                <h4><?= $platall->description ?></h4>
+                <h4><?= $platall->prix ?>€</h4>
+                <img src="assets/images/61d9831c482674000429052e.png" alt="" width="100" height="100" class="rounded-circle">
+            </div>
+
+        <?php
+        endforeach;
+        ?>
+
     </div>
-   
+
     <?php
     include_once "./Template/footer.php";
     ?>

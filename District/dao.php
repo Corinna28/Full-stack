@@ -83,3 +83,20 @@ function getPlatcat($limit, $offset, $id){
 
         return $platCats;
 }
+
+
+
+// -----------------------------------------------------------------plat.php
+
+
+function getPlatall(){
+    $db = connexionBase();
+
+    $platall = $db->prepare("SELECT * FROM `plat` ");
+    
+    $platall->execute();
+        $platalls= $platall->fetchAll(PDO::FETCH_OBJ); 
+
+        return $platalls;
+
+}
