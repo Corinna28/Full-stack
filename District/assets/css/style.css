@@ -1,0 +1,72 @@
+body {
+    background-image: url('../images/peinture-murale-framboise-decohom.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.form-group{
+    color: rgb(231, 226, 226);
+}
+
+
+
+
+.container-fluid {
+    text-align: center;
+    padding-top: 8px;
+    width: 100%;
+}
+
+p,h1,h4,pre,h3 {
+  color: rgb(231, 226, 226);
+}
+
+/* contour image des presentations des plats et catégorie */
+.arrondie {
+    border: 2px solid black;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    border-radius: 7px;
+}
+
+
+/* Web Responsive */
+
+@media screen and (max-width: 768px) {
+
+    h1,h2,
+    p {
+        font-size: 2rem
+        
+    }
+
+    aside {
+        position: relative;
+        width: 100%;
+        background: none;
+    }
+
+    ul {
+        list-style-position: inside;
+        display: block;
+    }
+
+    p {
+        font-size: medium;
+
+    }
+
+    h1 {
+        font-size: medium;
+
+    }
+
+    .tableoverflow {
+        overflow: auto;
+        width: 100%;
+        scrollbar-width: auto;
+
+    }
+
+}
+
