@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 // on importe le contenu du fichier "db.php"
 include('dao.php');
 // on exécute la méthode de connexion à notre BDD
@@ -16,7 +18,7 @@ include_once "Template/nav.php";
 ?>
 
 
-<div class="container-fluid g-0">
+<div class="container-fluid ">
 
     <!-- Image promotion -->
     <img class="pros" src="assets/images/bg2-modified.png" alt="district" title="district" width="1800" height="300" />
@@ -27,16 +29,19 @@ include_once "Template/nav.php";
             <h1 class="h1">Plats :</h1>
         </div>
 
-
+        <!-- 1ere variable avec le s l'ensemble , sans le s elelement lui-même -->
         <?php foreach ($platalls as $platall) :
         ?>
             <div class="col-4">
 
-                <img src="assets/images/food/<?= $platall->image ?>" width="300" height="350" alt="" class="arrondie">
-                <h3><?= $platall->libelle ?></h3>
-                <h4><?= $platall->description ?></h4>
-                <h4><?= $platall->prix ?>€</h4>
-                <img src="assets/images/61d9831c482674000429052e.png" alt="" width="100" height="100" class="rounded-circle">
+                <img src="assets/images/food/<?= $platall->image; ?>" width="300" height="350" alt="" class="arrondie">
+                <h3><?= $platall->libelle; ?></h3>
+                <h4><?= $platall->description; ?></h4>
+                <h4><?= $platall->prix; ?>€</h4>
+
+                <a href="commande.php?id=<?= $platall->id; ?>">
+                    <img src="assets/images/61d9831c482674000429052e.png" alt="" width="100" height="100" class="rounded-circle">
+                </a>
             </div>
 
         <?php

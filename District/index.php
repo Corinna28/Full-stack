@@ -1,4 +1,5 @@
 <?php
+session_start();
 // on importe le contenu du fichier "db.php"
 include('dao.php');
 // on exécute la méthode de connexion à notre BDD
@@ -16,23 +17,23 @@ include_once "Template/nav.php";
 ?>
 
 
-<div class="container-fluid g-0">
-   
- <!-- Image promotion -->
+<div class="container-fluid container-index ">
+
+    <!-- Image promotion -->
 
     <img class="promos" src="assets/images/bg2-modified.png" alt="district" title="district" width="1800" height="300" />
 
-    
+
 
     <div class="row">
         <!-- catégorie -->
 
         <div class="col-md-12 col-sm-12">
-            <h1 class="h2">Catégorie populaires :</h1>
+            <h1 class="h1">Catégorie populaires :</h1>
         </div>
         <?php foreach ($cats as $cat) :
         ?>
-            <div class="col-3">
+            <div class="col-4 my-2">
                 <img src="assets/images/category/<?= $cat->image ?>" width="300" height="400" alt="" class="arrondie">
             </div>
         <?php
@@ -47,12 +48,12 @@ include_once "Template/nav.php";
         <!-- plats -->
 
         <div class="col-md-12 col-sm-12">
-            <p class="h2">Plats :</p>
+            <h1 class="h1 titre-index">Plats :</h1>
         </div>
 
         <?php foreach ($plats as $plat) :
         ?>
-            <div class="col-3">
+            <div class="col-4 my-2">
                 <img src="assets/images/food/<?= $plat->image ?>" width="300" height="400" alt="" class="arrondie">
             </div>
         <?php

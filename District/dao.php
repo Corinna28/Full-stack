@@ -44,7 +44,7 @@ function getPlat(){
 }
 
 // --------------------------------------------------------------categorie.php
-
+// cette fonction recupere les categories page categorie
 function getCatdiver($limit, $offset){
     $db = connexionBase();
 
@@ -63,7 +63,7 @@ function getCatdiver($limit, $offset){
 
 
 // ----------------------------------------------------plat/catégorie.php
-
+// cette fonction recupere les plats par catégorie
 
 function getPlatcat($limit, $offset, $id){
     $db = connexionBase();
@@ -87,16 +87,67 @@ function getPlatcat($limit, $offset, $id){
 
 
 // -----------------------------------------------------------------plat.php
-
+// cette fonction recupere tout les plats page plat
 
 function getPlatall(){
     $db = connexionBase();
 
-    $platall = $db->prepare("SELECT * FROM `plat` ");
+    $platall = $db->prepare("SELECT * FROM `plat`");
     
     $platall->execute();
-        $platalls= $platall->fetchAll(PDO::FETCH_OBJ); 
+        $platalls = $platall->fetchAll(PDO::FETCH_OBJ); 
 
         return $platalls;
 
 }
+
+
+// -----------------------------------------------------------------commandes.php
+
+//cette fonction est utilisée pour retrouver le plat qui a été commandé
+function getPlatbyID($id){
+    $db= connexionBase();
+
+    $commande = $db->prepare("SELECT * FROM `plat` WHERE `id`= :id;");
+    $commande->bindValue(':id', $id, pdo::PARAM_INT);
+    $commande->execute();
+    return $commande->fetch(PDO::FETCH_OBJ);
+}
+
+// cette fonction est pour insérée dans la base de données la commande passe en direct
+
+function getCompasse($quantite, $nom_prenom, $email, $telephone, $adresse){
+    $db= connexionBase();
+
+    $commpasse = $db->prepare("INSERT INTO `commande`( `quantite`, `total`, `date_commande`,`nom_client`, `telephone_client`, `email_client`, `adresse_client`) VALUES ('[value-3]','[value-4]','[value-5]','[value-7]','[value-8]','[value-9]','[value-10]')");
+    $commpasse->bindValue(":quantite", $quantite,pdo::PARAM_INT);
+    // paramint entier le str pour le reste
+    $commpasse->bindValue(":nom_prenom", $nom_prenom,pdo::PARAM_STR);
+    $commpasse->bindValue(":email", $email,pdo::PARAM_STR);
+    $commpasse->bindValue(":telephone", $telephone, pdo::PARAM_STR);
+    $commpasse->bindValue(":adresse", $adresse, pdo::PARAM_STR);
+      
+    $commpasse->execute();
+    return $commpasse->fetch(PDO::FETCH_OBJ);
+}
+
+
+// -----------------------------------------------------------------login.php
+
+function getIdentifiants($identifiant, $password){
+       $db = connexionBase();
+
+    $username = $db->prepare("SELECT * FROM utilisateur WHERE email= :identifiant;");
+
+    $username->bindValue(":identifiant", $identifiant, PDO::PARAM_STR);
+    $username->execute();
+    
+    $user = $username->fetch(pdo::FETCH_ASSOC);
+    if ($user['password'] == $password) {
+        // if ($user && password_verify($password, $user['password'])){
+        return $user;
+    }
+
+    return null;
+}
+

@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 // on importe le contenu du fichier "db.php"
 include('dao.php');
 // on exécute la méthode de connexion à notre BDD
@@ -34,7 +36,7 @@ include_once "Template/nav.php";
                     <div class="form-group">
                         <label for="nom">Nom* :</label>
                         <input type="text" class="form-control" id="nom" name="nom" placeholder="Veuillez saisir votre nom">
-                        <small id="emailHelp" class="form-text text-muted">Ce champ est obligatoire.</small>
+                        <small id="emailHelp" class="form-text text-warning">Ce champ est obligatoire.</small>
                     </div>
                     <div class="form-group">
                         <label for="prenom">Prénom* :</label>
@@ -44,13 +46,13 @@ include_once "Template/nav.php";
                     <div class="form-group">
                         <label for="mail">Email* :</label>
                         <input type="text" class="form-control" id="mail" name="mail" placeholder="dave.loper@afpa.com">
-                        <small id="emailHelp" class="form-text text-muted">Nous ne partagerons jamais votre e-mail
+                        <small id="emailHelp" class="form-text text-warning">Nous ne partagerons jamais votre e-mail
                             avec quelqu'un d'autre.</small>
                     </div>
                     <div class="form-group">
                         <label for="phone">Téléphone* : </label>
                         <input type="text" class="form-control" id="phone" name="phone" placeholder="Veuillez indiquer votre numéro de télephone">
-                        <small id="telephoneHelp" class="form-text text-muted">Ce champ est obligatoire.</small>
+                        <small id="telephoneHelp" class="form-text text-warning">Ce champ est obligatoire.</small>
                     </div>
                     <div class="form-group">
                         <label for="question">Votre question* :</label>
@@ -59,12 +61,7 @@ include_once "Template/nav.php";
 
                 </fieldset>
 
-
-                <div class="form-group form-check">
-                    <input type="checkbox" class="form-check-input" id="check1" name="check1">
-                    <label class="form-check-label" for="exampleCheck1"> * J'accepte le traitement informatique de
-                        ce formulaire.</label>
-                </div>
+               
                 <button type="submit" class="btn btn-outline-light">Envoyer</button>
                 <button type="submit" class="btn btn-outline-light">Annuler</button>
                 <hr>

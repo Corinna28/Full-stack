@@ -1,10 +1,12 @@
 <?php
+session_start();
+
 // on importe le contenu du fichier "db.php"
 include('dao.php');
 // on exécute la méthode de connexion à notre BDD
 $db = connexionBase();
 
-// requetes lancer via le dao
+
 
 $page = $_GET['page'];
 if ($page <= 0){
@@ -14,9 +16,10 @@ if ($page <= 0){
     $limit = 6;
 
 // limit donne le nombre d'image mis sur la pagination
-
 $offset = ($page - 1) * $limit;
 
+
+// requetes lancer via le dao
 $catdivers = getCatdiver($limit, $offset);
 
 // la commande LIMIT permet de spécifier le nombre maximum de résultats que l’on souhaite obtenir, tandis que la commande OFFSET permet d'effectuer un décalage sur l'ensemble des résultats. Un cas d'utilisation courant consiste à utiliser ces commandes dans le cadre du développement d'une pagination.
@@ -44,8 +47,8 @@ include_once "Template/nav.php";
 
             <div class="col-4">
 
-                <a href="platcat.php?cat=<?= $catdiver->id;?>"><img src="assets/images/category/<?= $catdiver->image ?>" width="300" height="400" alt="" class="arrondie">
-                <h3><?= $catdiver->libelle ?></h3></a>
+                <a href="platcat.php?cat=<?= $catdiver->id; ?>"><img src="assets/images/category/<?= $catdiver->image; ?>" width="300" height="400" alt="" class="arrondie">
+                <h3><?= $catdiver->libelle; ?></h3></a>
             </div>
 
         <?php

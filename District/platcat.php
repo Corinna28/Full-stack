@@ -59,7 +59,10 @@ include_once "Template/nav.php";
                 <h3><?= $Platcat->libelle ?></h3>
                 <h4><?= $Platcat->description ?></h4>
                 <h4><?= $Platcat->prix ?> €</h4>
+
+                <a href="commande.php?id=<?= $Platcat->id; ?>">
                 <img src="assets/images/61d9831c482674000429052e.png" alt="" width="100" height="100" class="rounded-circle">
+                </a>
             </div>
 
         <?php

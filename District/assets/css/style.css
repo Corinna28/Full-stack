@@ -4,18 +4,22 @@ body {
     background-size: cover;
 
 }
-.form-group{
+
+.container-index, .container-fluid{
+    text-align: center;
+    padding-top: 20px;
+    width: 100%;
     color: rgb(231, 226, 226);
 }
 
 
-
-
-.container-fluid {
-    text-align: center;
-    padding-top: 8px;
-    width: 100%;
+/* texte politique de confidentialite */
+.container-confi{
+    text-align: left;
 }
+
+
+/* Couleur d'ecriture */
 
 p,h1,h4,pre,h3 {
   color: rgb(231, 226, 226);
@@ -29,6 +33,16 @@ p,h1,h4,pre,h3 {
     border-radius: 7px;
 }
 
+
+/* login */
+.connecter{
+    color: rgb(231, 226, 226);
+}
+
+/* enregistre */
+.inscrit{
+    color: rgb(231, 226, 226);
+}
 
 /* Web Responsive */
 
