@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 // on importe le contenu du fichier "db.php"
 include('dao.php');
 // on exécute la méthode de connexion à notre BDD
@@ -22,9 +21,9 @@ include_once "Template/nav.php";
 
 
 
-    <div class="row gy-5">
+    <div class="row gy-5 ">
 
-        <div class="col-5">
+        <div class="col-5 ">
             <form action="" id="formulaire" method="post">
                 <fieldset>
 
@@ -34,29 +33,27 @@ include_once "Template/nav.php";
                     </legend>
 
                     <div class="form-group">
-                        <label for="nom">Nom* :</label>
-                        <input type="text" class="form-control" id="nom" name="nom" placeholder="Veuillez saisir votre nom">
-                        <small id="emailHelp" class="form-text text-warning">Ce champ est obligatoire.</small>
-                    </div>
+                        <label for="nom">Nom :</label>
+                        <input type="text" required="required" class="form-control" id="nom" name="nom" placeholder="Veuillez saisir votre nom">
+                                         </div>
                     <div class="form-group">
-                        <label for="prenom">Prénom* :</label>
-                        <input type="text" class="form-control" id="prenom" name="prenom" placeholder="Veuillez saisir votre Prénom">
+                        <label for="prenom">Prénom :</label>
+                        <input type="text" required="required" class="form-control" id="prenom" name="prenom" placeholder="Veuillez saisir votre Prénom">
                     </div>
 
                     <div class="form-group">
-                        <label for="mail">Email* :</label>
-                        <input type="text" class="form-control" id="mail" name="mail" placeholder="dave.loper@afpa.com">
-                        <small id="emailHelp" class="form-text text-warning">Nous ne partagerons jamais votre e-mail
-                            avec quelqu'un d'autre.</small>
+                        <label for="mail">Email :</label>
+                        <input type="text" required="required" class="form-control" id="mail" name="mail" placeholder="dave.loper@afpa.com">
+                       
                     </div>
                     <div class="form-group">
-                        <label for="phone">Téléphone* : </label>
-                        <input type="text" class="form-control" id="phone" name="phone" placeholder="Veuillez indiquer votre numéro de télephone">
-                        <small id="telephoneHelp" class="form-text text-warning">Ce champ est obligatoire.</small>
+                        <label for="phone">Téléphone : </label>
+                        <input type="text" required="required" class="form-control" id="phone" name="phone" placeholder="Veuillez indiquer votre numéro de télephone">
+                        
                     </div>
                     <div class="form-group">
-                        <label for="question">Votre question* :</label>
-                        <textarea class="form-control" id="question" name="question" rows="4"></textarea>
+                        <label for="question">Votre question :</label>
+                        <textarea class="form-control" required="required" id="question" name="question" rows="4"></textarea>
                     </div>
 
                 </fieldset>

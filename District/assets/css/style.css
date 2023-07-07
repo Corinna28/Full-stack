@@ -12,6 +12,13 @@ body {
     color: rgb(231, 226, 226);
 }
 
+.container-commande{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 
 /* texte politique de confidentialite */
 .container-confi{
@@ -38,6 +45,14 @@ p,h1,h4,pre,h3 {
 .connecter{
     color: rgb(231, 226, 226);
 }
+
+/* bonjour */
+
+.bonjour{
+ color:rgb(5, 5, 5);
+ font-size: xx-large;
+}
+
 
 /* enregistre */
 .inscrit{

@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once '../vendor/autoload.php';
 
 use PHPMailer\PHPMailer\PHPMailer;
@@ -114,9 +115,11 @@ try {
 } catch (Exception $e) {
     echo "Erreur : " . $requete->errorInfo()[2] . "<br>";
     die("Fin du script (script/script_commande.php)");
+    
 }
 
-// Si OK: redirection 
+// Si OK: redirection avec un message qui peut être récupéré sur la page d'accueil
+$_SESSION['commande_ok']='OK!';
 header("Location: /index.php");
 exit;
 ?>

@@ -3,11 +3,13 @@
   <div class="container-fluid">
     <img src="assets/images/the_district_brand/pinterest_board_photo.png" alt="" width="100" height="100" class="rounded-circle">
 
-    <?php
-     if (isset($_SESSION['user'])){
-echo "Bonjour " . $_SESSION['user'];
-     }
 
+    <?php
+    if (isset($_SESSION['user'])) {
+      ?>
+    <span class="bonjour" > <?= "Bonjour " . $_SESSION['user']; ?></span>
+  <?php  
+  }
     ?>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,14 +35,14 @@ echo "Bonjour " . $_SESSION['user'];
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="login.php">Connexion</a></li>
             <li><a class="dropdown-item" href="register.php">Nouvel Utilisateur</a></li>
-                       
+
           </ul>
         </li>
 
         <form class="d-flex" role="search">
           <input class="form-control me-2" type="search" name="" placeholder="Recherche" aria-label="Search">
-          
-          
+
+
           <button class="btn btn-outline-secondary" type="submit">Recherche</button>
         </form>
 

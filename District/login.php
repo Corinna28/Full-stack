@@ -22,12 +22,12 @@ include_once "Template/nav.php";
         <form method="post" action="../script/login_script.php">
             <div class="input-group ">
                 <label>Username : </label>
-                <input type="text" name="username" value="">
+                <input type="text" required="required" name="username" value="">
             </div>
             <br>
             <div class="input-group my-5">
                 <label>Password : </label>
-                <input type="password" name="password">
+                <input type="password" required="required" name="password">
             </div>
             
             <button type="submit" class="btn btn-outline-light">Se connecter</button>

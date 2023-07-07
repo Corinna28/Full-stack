@@ -151,3 +151,6 @@ function getIdentifiants($identifiant, $password){
     return null;
 }
 
+// -----------------------------------------------------------------register.php
+
+

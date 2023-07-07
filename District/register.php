@@ -21,19 +21,19 @@ include_once "Template/nav.php";
         <form method="post" name="" action="">
             <div class="input-group mb-3">
                 <label>Nom - Prénom : </label>
-                <input type="text" name="nomprenom" value="">
+                <input type="text" required="required" name="nomprenom" value="">
             </div>
             <div class="input-group mb-3">
                 <label>Email : </label>
-                <input type="text" name="mail" value="">
+                <input type="text" required="required"  name="mail" value="">
             </div>
             <div class="input-group mb-3">
                 <label>Password : </label>
-                <input type="password" name="password">
+                <input type="password" required="required" name="password">
             </div>
             <div class="input-group mb-3">
                 <label>Confirmation Password : </label>
-                <input type="password" name="confirmation">
+                <input type="password" required="required" name="confirmation">
             </div>
 
             <button type="submit" class="btn btn-outline-light">S'inscrire</button>

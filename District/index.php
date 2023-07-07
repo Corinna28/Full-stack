@@ -1,5 +1,7 @@
 <?php
 session_start();
+
+
 // on importe le contenu du fichier "db.php"
 include('dao.php');
 // on exécute la méthode de connexion à notre BDD
@@ -19,6 +21,13 @@ include_once "Template/nav.php";
 
 <div class="container-fluid container-index ">
 
+<!-- message pour la validation de commande -->
+<?php if (isset($_SESSION['commande_ok'])): ?>
+                           <p> <?php echo($_SESSION['commande_ok']) ?></p>
+                           <!-- //on l'efface au rechargement de la page -->
+                            <?php unset($_SESSION['commande_ok']);
+                            endif ?>
+
     <!-- Image promotion -->
 
     <img class="promos" src="assets/images/bg2-modified.png" alt="district" title="district" width="1800" height="300" />
@@ -33,7 +42,7 @@ include_once "Template/nav.php";
         </div>
         <?php foreach ($cats as $cat) :
         ?>
-            <div class="col-4 my-2">
+            <div class="col-4 my-2 mx-auto">
                 <img src="assets/images/category/<?= $cat->image ?>" width="300" height="400" alt="" class="arrondie">
             </div>
         <?php

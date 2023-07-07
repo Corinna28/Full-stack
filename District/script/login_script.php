@@ -19,7 +19,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // stocker les informations de l'utilisateur
     if ($user) {
         $_SESSION['user'] = $user['nom_prenom'];
-        var_dump($user['nom_prenom']);
         header('Location: /index.php');
         exit;
     } else {
