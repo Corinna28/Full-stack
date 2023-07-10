@@ -10,7 +10,7 @@ include('db.php');
     function getCategorie(){
         $db = connexionBase();
 
-        $sql = $db->query("SELECT categorie.libelle, categorie.image, SUM(`quantite`) 
+        $sql = $db->query("SELECT categorie.id, categorie.libelle, categorie.image, SUM(`quantite`) 
                             FROM categorie 
                         JOIN plat ON categorie.id=plat.id_categorie 
                         JOIN commande On plat.id=commande.id_plat
@@ -34,7 +34,7 @@ include('db.php');
 function getPlat(){
     $db = connexionBase();
 
-        $plat = $db->query("SELECT `libelle`,`image`, SUM(`quantite`) 
+        $plat = $db->query("SELECT `id_categorie`, `libelle`,`image`, SUM(`quantite`) 
         FROM `plat` 
         JOIN commande ON plat.id = commande.id_plat
          GROUP BY `libelle`ORDER BY SUM(`quantite`) DESC LIMIT 3;");
@@ -150,7 +150,4 @@ function getIdentifiants($identifiant, $password){
 
     return null;
 }
-
-// -----------------------------------------------------------------register.php
-
 

@@ -15,10 +15,6 @@ $id = intval($_GET['id']);
 $platcom = getPlatbyID($id);
 
 
-
-// $commpasse = getCompasse($quantite, $nom_prenom, $email, $telephone, $adresse);
-// var_dump($commpasse);
-
 // requetes lancer via le dao
 
 include_once "Template/header.php";

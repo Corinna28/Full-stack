@@ -24,10 +24,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
 
         $_SESSION['Identifiant_incorrect'] = "Votre identifiant est incorrect";
-        header('Location: login.php');
+        header('Location: /login.php');
         exit;
     }
 } else {
-    header('Location: login.php');
+    header('Location: /login.php');
     exit;
 }

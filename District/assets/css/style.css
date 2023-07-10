@@ -12,13 +12,18 @@ body {
     color: rgb(231, 226, 226);
 }
 
-.container-commande{
+.container-commande, .container-contact{
     display: flex;
     justify-content: center;
     align-items: center;
+    }
+
+.contact{
+    text-align: center;
+    padding-top: 20px;
+    width: 100%;
+    color: rgb(231, 226, 226);
 }
-
-
 
 /* texte politique de confidentialite */
 .container-confi{
@@ -57,6 +62,12 @@ p,h1,h4,pre,h3 {
 /* enregistre */
 .inscrit{
     color: rgb(231, 226, 226);
+}
+
+/* erreur de connexion (login) */
+.erreur{
+    color: rgb(219, 216, 25);
+    font-size: xx-large;
 }
 
 /* Web Responsive */

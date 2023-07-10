@@ -119,7 +119,7 @@ try {
 }
 
 // Si OK: redirection avec un message qui peut être récupéré sur la page d'accueil
-$_SESSION['commande_ok']='OK!';
+$_SESSION['commande_ok']='Votre commande a bien été prise en compte';
 header("Location: /index.php");
 exit;
 ?>

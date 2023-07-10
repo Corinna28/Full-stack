@@ -1,4 +1,5 @@
 <?php
+session_start();
 // on importe le contenu du fichier "db.php"
 include('dao.php');
 // on exécute la méthode de connexion à notre BDD
@@ -12,6 +13,16 @@ include_once "Template/nav.php";
 ?>
 
 <div class="container-fluid">
+<?php
+    if (isset($_SESSION['Identifiant_incorrect'])) {
+        // var_dump($_SESSION['Identifiant_incorrect']);
+    ?>
+      <span class="erreur" > <?= "Une erreur est survenue"; ?></span>
+    <?php
+    unset($_SESSION['Identifiant_incorrect']);
+    }
+    ?>
+
 
     <div class="col-4 my-4 mx-auto border border-light">
         <nav class="navbar navbar-light ">

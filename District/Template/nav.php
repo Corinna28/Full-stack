@@ -6,10 +6,10 @@
 
     <?php
     if (isset($_SESSION['user'])) {
-      ?>
-    <span class="bonjour" > <?= "Bonjour " . $_SESSION['user']; ?></span>
-  <?php  
-  }
+    ?>
+      <span class="bonjour"> <?= "Bonjour " . $_SESSION['user']; ?></span>
+    <?php
+    }
     ?>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,13 +34,13 @@
           <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Identification</a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="login.php">Connexion</a></li>
-            <li><a class="dropdown-item" href="register.php">Nouvel Utilisateur</a></li>
+            <li><a class="dropdown-item" href="logout.php">Deconnexion</a></li>
 
           </ul>
         </li>
 
         <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" name="" placeholder="Recherche" aria-label="Search">
+          <input class="form-control me-2" type="search" name="recherche" placeholder="Recherche" aria-label="Search">
 
 
           <button class="btn btn-outline-secondary" type="submit">Recherche</button>

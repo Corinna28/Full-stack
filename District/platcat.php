@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 // on importe le contenu du fichier "db.php"
 include('dao.php');
 // on exécute la méthode de connexion à notre BDD

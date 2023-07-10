@@ -21,12 +21,12 @@ include_once "Template/nav.php";
 
 <div class="container-fluid container-index ">
 
-<!-- message pour la validation de commande -->
-<?php if (isset($_SESSION['commande_ok'])): ?>
-                           <p> <?php echo($_SESSION['commande_ok']) ?></p>
-                           <!-- //on l'efface au rechargement de la page -->
-                            <?php unset($_SESSION['commande_ok']);
-                            endif ?>
+    <!-- message pour la validation de commande -->
+    <?php if (isset($_SESSION['commande_ok'])) : ?>
+        <p> <?php echo ($_SESSION['commande_ok']) ?></p>
+        <!-- //on l'efface au rechargement de la page -->
+    <?php unset($_SESSION['commande_ok']);
+    endif ?>
 
     <!-- Image promotion -->
 
@@ -43,7 +43,8 @@ include_once "Template/nav.php";
         <?php foreach ($cats as $cat) :
         ?>
             <div class="col-4 my-2 mx-auto">
-                <img src="assets/images/category/<?= $cat->image ?>" width="300" height="400" alt="" class="arrondie">
+               <a href="platcat.php?cat=<?= $cat->id;?>"> <img src="assets/images/category/<?= $cat->image ?>" width="300" height="400" alt="" class="arrondie"></a>
+               <h4><?= $cat->libelle; ?></h4>
             </div>
         <?php
         endforeach;
@@ -62,9 +63,10 @@ include_once "Template/nav.php";
 
         <?php foreach ($plats as $plat) :
         ?>
-            <div class="col-4 my-2">
-                <img src="assets/images/food/<?= $plat->image ?>" width="300" height="400" alt="" class="arrondie">
-            </div>
+            <div class="col-3 my-2 mx-auto">
+            <a href="platcat.php?cat=<?= $plat->id_categorie;?>"><img src="assets/images/food/<?= $plat->image ?>" width="300" height="400" alt="" class="arrondie"></a>
+            <h4><?= $plat->libelle; ?></h4>
+        </div>
         <?php
         endforeach;
         ?>
