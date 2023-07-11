@@ -44,7 +44,7 @@ include_once "Template/nav.php";
         ?>
             <div class="col-4 my-2 mx-auto">
                <a href="platcat.php?cat=<?= $cat->id;?>"> <img src="assets/images/category/<?= $cat->image ?>" width="300" height="400" alt="" class="arrondie"></a>
-               <h4><?= $cat->libelle; ?></h4>
+               <h4><a href="platcat.php?cat=<?= $cat->id;?>"><?= $cat->libelle; ?></h4><a></a>
             </div>
         <?php
         endforeach;

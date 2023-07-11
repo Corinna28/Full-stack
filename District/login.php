@@ -13,16 +13,19 @@ include_once "Template/nav.php";
 ?>
 
 <div class="container-fluid">
-<?php
+    <?php
     if (isset($_SESSION['Identifiant_incorrect'])) {
         // var_dump($_SESSION['Identifiant_incorrect']);
     ?>
-      <span class="erreur" > <?= "Une erreur est survenue"; ?></span>
+        <span class="erreur"> <?= "Une erreur est survenue"; ?></span>
     <?php
-    unset($_SESSION['Identifiant_incorrect']);
+        unset($_SESSION['Identifiant_incorrect']);
     }
     ?>
-
+    <!-- Image promotion -->
+    <div class="col">
+        <img class="promos" src="assets/images/bg2-modified.png" alt="district" title="district" width="1800" height="300" />
+    </div>
 
     <div class="col-4 my-4 mx-auto border border-light">
         <nav class="navbar navbar-light ">
@@ -40,7 +43,7 @@ include_once "Template/nav.php";
                 <label>Password : </label>
                 <input type="password" required="required" name="password">
             </div>
-            
+
             <button type="submit" class="btn btn-outline-light">Se connecter</button>
             <a href="" class="btn btn-outline-light">Retour</a>
         </form>

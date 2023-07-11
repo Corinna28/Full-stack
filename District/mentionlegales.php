@@ -17,7 +17,7 @@ include_once "Template/nav.php";
 <div class="container-fluid g-0">
 
     <!-- Image promotion -->
-    <img class="pros" src="assets/images/bg2-modified.png" alt="district" title="district" width="1800" height="300" />
+    <img class="promos" src="assets/images/bg2-modified.png" alt="district" title="district" width="1800" height="300" />
     <p class="h1">Mentions Légales</p>
     <img class="trans" src="assets/images/the_district_brand/logo_transparent.png" alt="trans" title="trans" width="400" height="400" />
 

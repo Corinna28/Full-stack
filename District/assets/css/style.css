@@ -5,20 +5,29 @@ body {
 
 }
 
-.container-index, .container-fluid{
+.container-index,
+.container-fluid {
     text-align: center;
     padding-top: 20px;
     width: 100%;
     color: rgb(231, 226, 226);
 }
 
-.container-commande, .container-contact{
+.container-commande,
+.container-contact {
     display: flex;
     justify-content: center;
     align-items: center;
-    }
+}
 
-.contact{
+
+.container-plats{
+    text-align: center;
+    
+   }
+
+
+.contact {
     text-align: center;
     padding-top: 20px;
     width: 100%;
@@ -26,15 +35,18 @@ body {
 }
 
 /* texte politique de confidentialite */
-.container-confi{
+.container-confi {
     text-align: left;
 }
 
 
 /* Couleur d'ecriture */
 
-p,h1,h4,pre,h3 {
-  color: rgb(231, 226, 226);
+p,
+h1,
+h4,
+h3,pre {
+    color: rgb(231, 226, 226);
 }
 
 /* contour image des presentations des plats et catégorie */
@@ -43,29 +55,30 @@ p,h1,h4,pre,h3 {
     -moz-border-radius: 7px;
     -webkit-border-radius: 7px;
     border-radius: 7px;
+    object-fit: cover;
 }
 
 
 /* login */
-.connecter{
+.connecter {
     color: rgb(231, 226, 226);
 }
 
 /* bonjour */
 
-.bonjour{
- color:rgb(5, 5, 5);
- font-size: xx-large;
+.bonjour {
+    color: rgb(5, 5, 5);
+    font-size: xx-large;
 }
 
 
 /* enregistre */
-.inscrit{
+.inscrit {
     color: rgb(231, 226, 226);
 }
 
 /* erreur de connexion (login) */
-.erreur{
+.erreur {
     color: rgb(219, 216, 25);
     font-size: xx-large;
 }
@@ -73,13 +86,22 @@ p,h1,h4,pre,h3 {
 /* Web Responsive */
 
 @media screen and (max-width: 768px) {
-
-    h1,h2,
-    p {
-        font-size: 2rem
-        
+    .rounded-circle{
+        display: none;
     }
 
+    h1,
+    h2,
+    h3,
+    p, pre {
+        font-size: 2rem
+    }
+
+    .promos{
+        position: relative;
+        width: 100%;
+        background: none;
+    }
     aside {
         position: relative;
         width: 100%;
@@ -96,6 +118,16 @@ p,h1,h4,pre,h3 {
 
     }
 
+    h2 {
+        font-size: medium;
+
+    }
+
+    h3 {
+        font-size: medium;
+
+    }
+
     h1 {
         font-size: medium;
 
@@ -108,4 +140,10 @@ p,h1,h4,pre,h3 {
 
     }
 
+
+    .trans{
+        position: relative;
+        width: 100%;
+        background: none;
+    }
 }

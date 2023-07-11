@@ -18,12 +18,12 @@ include_once "Template/nav.php";
 ?>
 
 
-<div class="container-fluid ">
+<div class="container-fluid  ">
 
     <!-- Image promotion -->
-    <img class="pros" src="assets/images/bg2-modified.png" alt="district" title="district" width="1800" height="300" />
+    <img class="promos" src="assets/images/bg2-modified.png" alt="district" title="district" width="1800" height="300" />
 
-    <div class="row">
+    <div class="row ">
         <!-- catégorie -->
         <div class="col-md-12 col-sm-12">
             <h1 class="h1">Plats :</h1>
@@ -32,7 +32,7 @@ include_once "Template/nav.php";
         <!-- 1ere variable avec le s l'ensemble , sans le s elelement lui-même -->
         <?php foreach ($platalls as $platall) :
         ?>
-            <div class="col-4">
+            <div class="col-4 container-plats">
 
                 <img src="assets/images/food/<?= $platall->image; ?>" width="300" height="350" alt="" class="arrondie">
                 <h3><?= $platall->libelle; ?></h3>

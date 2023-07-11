@@ -17,7 +17,7 @@ include_once "Template/nav.php";
     <!-- barre de recherche -->
 
     <!-- Image promotion -->
-    <img class="pros" src="assets/images/bg2-modified.png" alt="district" title="district" width="1800" height="300" />
+    <img class="promos" src="assets/images/bg2-modified.png" alt="district" title="district" width="1800" height="300" />
 
 
 

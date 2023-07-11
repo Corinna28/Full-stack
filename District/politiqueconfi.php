@@ -16,9 +16,9 @@ include_once "Template/nav.php";
 
 
 
-<!-- Image promotion -->
-<img class="promos" src="assets/images/bg2-modified.png" alt="district" title="district" width="1800" height="300" />
 <div class="container-fluid container-confi">
+    <!-- Image promotion -->
+    <img class="promos" src="assets/images/bg2-modified.png" alt="district" title="district" width="1800" height="300" />
     <p class="h1">Politique de confidentialité</p>
 
     <h3>A. Collecte de l’information</h3>

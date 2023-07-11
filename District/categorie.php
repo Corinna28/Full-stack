@@ -34,8 +34,9 @@ include_once "Template/nav.php";
 <div class="container-fluid g-0">
 
     <!-- Image promotion -->
-    <img class="pros" src="assets/images/bg2-modified.png" alt="district" title="district" width="1800" height="300" />
-
+    <div class="col">
+    <img class="promos" src="assets/images/bg2-modified.png" alt="district" title="district" width="1800" height="300" />
+    </div>
     <div class="row">
         <!-- catégorie -->
         <div class="col-md-12 col-sm-12">

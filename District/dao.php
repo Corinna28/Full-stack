@@ -5,6 +5,7 @@ include('db.php');
 
 // --------------------------------------------------------------Index.php
 
+
 // Obtenir la liste des catégories
 
     function getCategorie(){
@@ -150,4 +151,6 @@ function getIdentifiants($identifiant, $password){
 
     return null;
 }
+
+
 
