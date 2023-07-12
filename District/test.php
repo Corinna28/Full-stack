@@ -1,25 +1,33 @@
 <?php
 session_start();
-session_destroy();
+
+// on importe le contenu du fichier "db.php"
+include('dao.php');
+// on exécute la méthode de connexion à notre BDD
+$db = connexionBase();
+
+
+
+include_once "Template/header.php";
+include_once "Template/nav.php";
+
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-
 <body>
-  <div class="user-widget">
-    <?php if (isset($_SESSION['user_id']) && $_SESSION['user_id'] !== null) : ?>
-      <a href="/logout.php">Se déconnecter</a>
-    <?php else : ?>
-      <a href="/login.php">Se connecter</a>
-    <?php endif; ?>
-  </div>
-</body>
 
-</html>
+
+<div class="card">
+  <img src="jeans3.jpg" alt="Denim Jeans" style="width:100%">
+  <h1>Tailored Jeans</h1>
+  <p class="price">$19.99</p>
+  <p>Some text about the jeans..</p>
+  <p><button>Add to Cart</button></p>
+</div> 
+
+  
+
+
+  <?php
+  include_once "./Template/footer.php";
+  ?>
+</body>

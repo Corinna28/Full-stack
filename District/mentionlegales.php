@@ -19,17 +19,17 @@ include_once "Template/nav.php";
     <!-- Image promotion -->
     <img class="promos" src="assets/images/bg2-modified.png" alt="district" title="district" width="1800" height="300" />
     <p class="h1">Mentions Légales</p>
-    <img class="trans" src="assets/images/the_district_brand/logo_transparent.png" alt="trans" title="trans" width="400" height="400" />
+    <img class="trans" src="assets/images/the_district_brand/logo_transparent.png" alt="trans" title="trans" width="300" height="300" />
 
     <p>Le site Internet district.com est la propriété exclusive de Corinna Fournier.
     <div class="col-md-12 col-xs-12">
-        <pre><h6> Siret : 83120628250223
-        Propriétaire : Corinna Fournier
-        E-mail : corinna@district.com
-        Téléphone : 05 42 65 32 79
-        Conception du site internet : Corinna Fournier
-        Le site est hébergé par la société AFPA, 30 rue de Poulainville, 80000 AMIENS, Capital de 100000 euros, Siret : 000 000 00000024.</pre>
-        </h6>
+        <p>Siret : 83120628250223</p>
+        <p>Propriétaire : Corinna Fournier</p>
+        <p>E-mail : corinna@district.com</p>
+        <p>Téléphone : 05 42 65 32 79</p>
+        <p>Conception du site internet : Corinna Fournier</p>
+        <p>Le site est hébergé par la société AFPA, 30 rue de Poulainville, 80000 AMIENS, Capital de 100000 euros, Siret : 000 000 00000024. </p>
+       
 
     </div>
 

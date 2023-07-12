@@ -26,7 +26,7 @@ include_once "Template/nav.php";
     <div class="col">
         <img class="promos" src="assets/images/bg2-modified.png" alt="district" title="district" width="1800" height="300" />
     </div>
-
+    
     <div class="col-4 my-4 mx-auto border border-light">
         <nav class="navbar navbar-light ">
             <a class="navbar-brand connecter">Se Connecter</a>
@@ -34,7 +34,7 @@ include_once "Template/nav.php";
         <link rel="stylesheet" href="assets/css/style.css">
 
         <form method="post" action="../script/login_script.php">
-            <div class="input-group ">
+        <div class="input-group ">
                 <label>Username : </label>
                 <input type="text" required="required" name="username" value="">
             </div>

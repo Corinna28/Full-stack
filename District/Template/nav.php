@@ -39,7 +39,7 @@
           </ul>
         </li>
 
-        <form class="d-flex" role="search">
+        <form action="recherche.php" role="search">
           <input class="form-control me-2" type="search" name="recherche" placeholder="Recherche" aria-label="Search">
 
 
