@@ -1,4 +1,5 @@
 <?php
+session_start();
 // on importe le contenu du fichier "db.php"
 include('dao.php');
 // on exécute la méthode de connexion à notre BDD
@@ -12,35 +13,44 @@ include_once "Template/nav.php";
 ?>
 
 <div class="container-fluid">
-    <div class="col-4 my-5 mx-auto border border-light">
-        <nav class="navbar navbar-light">
-            <a class="navbar-brand inscrit" name="inscrit">S'Inscrire</a>
+
+    <!-- Image promotion -->
+    <div class="col">
+        <img class="promos" src="assets/images/bg2-modified.png" alt="district" title="district" width="1800" height="300" />
+    </div>
+
+    <div class="col-4 my-4 mx-auto">
+        <nav class="navbar navbar-light ">
+            <h2>S'enregistrer</h2>
         </nav>
         <link rel="stylesheet" href="assets/css/style.css">
 
-        <form method="post" name="" action="">
-            <div class="input-group mb-3">
-                <label>Nom - Prénom : </label>
-                <input type="text" required="required" name="nomprenom" value="">
+        <form method="post" action="../script/script_register.php">
+
+            <div class="input-group my-2">
+                <h4>Nom Prénom : </h4>
+                <input type="text" required="required" name="nom_prenom" value="vdfkjghdf">
             </div>
-            <div class="input-group mb-3">
-                <label>Email : </label>
-                <input type="text" required="required"  name="mail" value="">
+            <br>
+            <div class="input-group my-2">
+                <h4>Email : </h4>
+                <input type="Email" required="required" name="email" value="coco@gmail.fr">
             </div>
-            <div class="input-group mb-3">
-                <label>Password : </label>
-                <input type="password" required="required" name="password">
-            </div>
-            <div class="input-group mb-3">
-                <label>Confirmation Password : </label>
-                <input type="password" required="required" name="confirmation">
+            <br>
+            <div class="input-group my-2">
+                <h4>Password : </h4>
+                <input type="password" required="required" name="password" value="1245">
             </div>
 
-            <button type="submit" class="btn btn-outline-light">S'inscrire</button>
-            <a href="index.php" class="btn btn-outline-light">Retour</a>
+            <button type="submit" class="btn btn-outline-light">S'enregistrer'</button>
+            <a href="" class="btn btn-outline-light">Retour</a>
         </form>
-        <img class="trans" src="assets/images/the_district_brand/logo_transparent.png" alt="trans" title="trans" width="400" height="400" />
+        <img class="trans" src="assets/images/the_district_brand/logo_transparent.png" alt="trans" title="trans" width="200" height="200" />
     </div>
+
+
+
+
 
 </div>
 <?php

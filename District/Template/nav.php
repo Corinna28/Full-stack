@@ -29,10 +29,23 @@
         <li class="nav-item">
           <a class="nav-link" href="contact.php">Contact</a>
         </li>
+
+        <!-- gestion de la categorie gestion visible que pour l'admin -->
+   
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Gestion</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="gestion_cat.php">Catégorie</a></li>
+              <li><a class="dropdown-item" href="gestion_plats.php">Plats</a></li>
+            </ul>
+          </li>
+       
+
         <!-- menu deroulant inscription/connexion -->
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Identification</a>
           <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="register.php">S'enregistrer</a></li>
             <li><a class="dropdown-item" href="login.php">Connexion</a></li>
             <li><a class="dropdown-item" href="logout.php">Deconnexion</a></li>
 

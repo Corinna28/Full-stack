@@ -29,40 +29,47 @@ include_once "Template/nav.php";
         <img class="promos" src="assets/images/bg2-modified.png" alt="district" title="district" width="1800" height="300" />
 
         <div class="row ">
-            <h3>&#128269 Résultat Catégorie : </h3>
+            <h4>&#128269 Résultat Catégorie : </h4>
 
 
             <?php
             if (!empty($catres)) {
                 foreach ($catres as $catre) :
             ?>
-                    <div class="col-4 container-recherche">
+                    <div class="col-4 my-2 mx-auto container-recherche">
+                    <div class="card">
                         <img src="assets/images/category/<?= $catre['image']; ?>" width="300" height="350" alt="" class="arrondie">
-                        <h3><?= $catre['libelle']; ?></h3>
+                        <h3><a href="platcat.php?cat=<?= $catre['id']; ?>"><?= $catre['libelle']; ?></h3><a></a>
 
+                        
+
+                    </div>
                     </div>
             <?php
                 endforeach;
             } else {
-                echo '<h6>Aucun résultat trouvé</h6>';
+                echo '<h5 class="animate__animated animate__bounceInLeft">Aucun résultat trouvé</h5>';
             }
             ?>
 
-            <h3>&#128269 Résultat Plat : </h3>
+            <h4>&#128269 Résultat Plat : </h4>
 
             <?php
             if (!empty($platres)) {
                 foreach ($platres as $platre) :
             ?>
-                    <div class="col-4 container-recherche">
+            <div class="col-4 my-2 mx-auto container-recherche">
+            <div class="card">
+                    
                         <img src="assets/images/food/<?= $platre['image']; ?>" width="300" height="350" alt="" class="arrondie">
-                        <h3><?= $platre['libelle']; ?></h3>
+                        <h3><a href="commande.php?id=<?= $platre['id']; ?>"><?= $platre['libelle']; ?></h3><a></a>
 
                     </div>
+            </div>
             <?php
                 endforeach;
             } else {
-                echo '<p>Aucun résultat trouvé</p>';
+                echo '<h5 class="animate__animated animate__bounceInLeft"> Aucun résultat trouvé</h5>';
             }
             ?>
 

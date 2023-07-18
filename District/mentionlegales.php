@@ -18,10 +18,10 @@ include_once "Template/nav.php";
 
     <!-- Image promotion -->
     <img class="promos" src="assets/images/bg2-modified.png" alt="district" title="district" width="1800" height="300" />
-    <p class="h1">Mentions Légales</p>
+    <h1 class="animate__animated animate__bounceInLeft">Mentions Légales</h1>
     <img class="trans" src="assets/images/the_district_brand/logo_transparent.png" alt="trans" title="trans" width="300" height="300" />
 
-    <p>Le site Internet district.com est la propriété exclusive de Corinna Fournier.
+    <p>Le site Internet district.com est la propriété exclusive de Corinna Fournier.</p>
     <div class="col-md-12 col-xs-12">
         <p>Siret : 83120628250223</p>
         <p>Propriétaire : Corinna Fournier</p>

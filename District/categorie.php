@@ -9,11 +9,11 @@ $db = connexionBase();
 
 
 $page = $_GET['page'];
-if ($page <= 0){
-    $page=1;
+if ($page <= 0) {
+    $page = 1;
 }
 
-    $limit = 6;
+$limit = 6;
 
 // limit donne le nombre d'image mis sur la pagination
 $offset = ($page - 1) * $limit;
@@ -35,21 +35,23 @@ include_once "Template/nav.php";
 
     <!-- Image promotion -->
     <div class="col">
-    <img class="promos" src="assets/images/bg2-modified.png" alt="district" title="district" width="1800" height="300" />
+        <img class="promos" src="assets/images/bg2-modified.png" alt="district" title="district" width="1800" height="300" />
     </div>
     <div class="row">
         <!-- catégorie -->
         <div class="col-md-12 col-sm-12">
-            <h1 class="h1">Catégorie :</h1>
+            <h1 class="animate__animated animate__bounceInLeft">Catégorie :</h1>
         </div>
 
         <?php foreach ($catdivers as $catdiver) :
         ?>
 
-            <div class="col-4">
-
-                <a href="platcat.php?cat=<?= $catdiver->id; ?>"><img src="assets/images/category/<?= $catdiver->image; ?>" width="300" height="400" alt="" class="arrondie">
-                <h3><?= $catdiver->libelle; ?></h3></a>
+            <div class="col-4 my-2 mx-auto">
+                <div class="card">
+                    <a href="platcat.php?cat=<?= $catdiver->id; ?>"><img src="assets/images/category/<?= $catdiver->image; ?>" width="300" height="300" alt="" class="arrondie">
+                        <h3><a href="platcat.php?cat=<?= $catdiver->id; ?>"><?= $catdiver->libelle; ?></h3></a>
+                    </a>
+                </div>
             </div>
 
         <?php
@@ -65,4 +67,3 @@ include_once "Template/nav.php";
     include_once "./Template/footer.php";
     ?>
 </div>
-

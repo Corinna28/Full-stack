@@ -118,12 +118,13 @@ INSERT INTO `plat` (`id`, `libelle`, `description`, `prix`, `image`, `id_categor
 --
 -- Structure de la table `utilisateur`
 --
-
+DROP TABLE IF EXIST `utilisateur`;
 CREATE TABLE `utilisateur` (
   `id` int(11) NOT NULL,
   `nom_prenom` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
-  `password` varchar(255) NOT NULL
+  `password` varchar(255) NOT NULL,
+  `role` ENUM('admin','user')  NOT NULL DEFAULT 'user'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --

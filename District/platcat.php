@@ -50,21 +50,22 @@ include_once "Template/nav.php";
     <div class="row">
         <!-- catégorie -->
         <div class="col-md-12 col-sm-12">
-            <h1 class="h1">Plats :</h1>
+        <h1 class="animate__animated animate__bounceInLeft">Plats :</h1>
         </div>
 
         <?php foreach ($Platcats as $Platcat) :
         ?>
             <div class="col-4">
-
-                <img src="assets/images/food/<?= $Platcat->image; ?>" width="300" height="400" alt="" class="arrondie">
+            <div class="card">
+                <img src="assets/images/food/<?= $Platcat->image; ?>" width="300" height="300" alt="" class="arrondie">
                 <h3><?= $Platcat->libelle ?></h3>
-                <h4><?= $Platcat->description ?></h4>
-                <h4><?= $Platcat->prix ?> €</h4>
+                <h6><?= $Platcat->description ?></h6>
+                <h3><?= $Platcat->prix ?> €</h3>
 
                 <a href="commande.php?id=<?= $Platcat->id; ?>">
-                <img src="assets/images/61d9831c482674000429052e.png" alt="" width="100" height="100" class="rounded-circle">
+                <img src="assets/images/61d9831c482674000429052e.png" alt="" width="70" height="70" class="rounded-circle">
                 </a>
+            </div>
             </div>
 
         <?php

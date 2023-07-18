@@ -19,15 +19,15 @@ include_once "Template/nav.php";
 <div class="container-fluid container-confi">
     <!-- Image promotion -->
     <img class="promos" src="assets/images/bg2-modified.png" alt="district" title="district" width="1800" height="300" />
-    <p class="h1">Politique de confidentialité</p>
+    <h1 class="animate__animated animate__bounceInLeft">Politique de confidentialité</h1>
 
-    <h3>A. Collecte de l’information</h3>
+    <h4>A. Collecte de l’information</h4>
 
     <P>Nous recueillons des informations lorsque vous vous inscrivez sur notre site, lorsque vous vous connectez à votre compte, faites un achat, participez à un concours, et / ou lorsque vous vous déconnectez. Les informations recueillies incluent votre nom, votre adresse e-mail, numéro de téléphone, et / ou carte de crédit.</P>
 
     <P>En outre, nous recevons et enregistrons automatiquement des informations à partir de votre ordinateur et navigateur, y compris votre adresse IP, vos logiciels et votre matériel, et la page que vous demandez.</P>
 
-    <h3>B.Utilisation des informations</h3>
+    <h4>B.Utilisation des informations</h4>
 
     <P>Toutes les informations que nous recueillons auprès de vous peuvent être utilisées pour :</P>
 
@@ -38,11 +38,11 @@ include_once "Template/nav.php";
     <p> - Vous contacter par e-mail</P>
     <p> - Administrer un concours, une promotion, ou une enquête.</P>
 
-    <h3>C. Confidentialité du commerce en ligne</h3>
+    <h4>C. Confidentialité du commerce en ligne</h4>
 
     <P>Nous sommes les seuls propriétaires des informations recueillies sur ce site. Vos informations personnelles ne seront pas vendues, échangées, transférées, ou données à une autre société pour n’importe quelle raison, sans votre consentement, en dehors de ce qui est nécessaire pour répondre à une demande et / ou une transaction, comme par exemple pour expédier une commande.</P>
 
-    <h3>D. Divulgation à des tiers</h3>
+    <h4>D. Divulgation à des tiers</h4>
 
     <P>Nous ne vendons, n’échangeons et ne transférons pas vos informations personnelles identifiables à des tiers. Cela ne comprend pas les tierce parties de confiance qui nous aident à exploiter notre site Web ou à mener nos affaires, tant que ces parties conviennent de garder ces informations confidentielles.
 
@@ -50,18 +50,18 @@ include_once "Template/nav.php";
 
         Les informations non-privées, cependant, peuvent être fournies à d’autres parties pour le marketing, la publicité, ou d’autres utilisations.</P>
 
-    <h3>E. Protection des informations</h3>
+    <h4>E. Protection des informations</h4>
     <P>Nous mettons en œuvre une variété de mesures de sécurité pour préserver la sécurité de vos informations personnelles. Nous utilisons un cryptage à la pointe de la technologie pour protéger les informations sensibles transmises en ligne. Nous protégeons également vos informations hors ligne. Seuls les employés qui ont besoin d’effectuer un travail spécifique (par exemple, la facturation ou le service à la clientèle) ont accès aux informations personnelles identifiables. Les ordinateurs et serveurs utilisés pour stocker des informations personnelles identifiables sont conservés dans un environnement sécurisé.</P>
 
-    <h3>F. Se désabonner</h3>
+    <h4>F. Se désabonner</h4>
 
     <P>Nous utilisons l’adresse e-mail que vous fournissez pour vous envoyer des informations et mises à jour relatives à votre commande, des nouvelles de l’entreprise de façon occasionnelle, des informations sur des produits liés, etc. Si à n’importe quel moment vous souhaitez vous désinscrire et ne plus recevoir d’e-mails, des instructions de désabonnement détaillées sont incluses en bas de chaque e-mail.</P>
 
-    <h3>G. Consentement</h3>
+    <h4>G. Consentement</h4>
 
     <P>En utilisant notre site, vous consentez à notre politique de confidentialité.</P>
 
-    <h3>H. Quels sont vos droits ?</h3>
+    <h4>H. Quels sont vos droits ?</h4>
 
     <P>Vous disposez de différents droits, que vous pouvez exercer à tout moment. Vous pouvez ainsi :
 

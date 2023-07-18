@@ -20,10 +20,16 @@ include_once "Template/nav.php";
 
 
 <div class="container-fluid container-index ">
+<!-- <h1 class="animate__animated animate__bounceInLeft">An animated element</h1> -->
+<?php if (isset($_SESSION['enregistrement'])) : ?>
+        <h4> <?php echo ($_SESSION['enregistrement']) ?></h4>
+        <!-- //on l'efface au rechargement de la page -->
+    <?php unset($_SESSION['enregistrement']);
+    endif ?>
 
     <!-- message pour la validation de commande -->
     <?php if (isset($_SESSION['commande_ok'])) : ?>
-        <p> <?php echo ($_SESSION['commande_ok']) ?></p>
+        <h4> <?php echo ($_SESSION['commande_ok']) ?></h4>
         <!-- //on l'efface au rechargement de la page -->
     <?php unset($_SESSION['commande_ok']);
     endif ?>
@@ -38,13 +44,16 @@ include_once "Template/nav.php";
         <!-- catégorie -->
 
         <div class="col-md-12 col-sm-12">
-            <h1 class="h1">Catégorie populaires :</h1>
+            <h1 class="animate__animated animate__bounceInLeft">Catégories Populaires :</h1>
         </div>
         <?php foreach ($cats as $cat) :
         ?>
             <div class="col-4 my-2 mx-auto">
-               <a href="platcat.php?cat=<?= $cat->id;?>"> <img src="assets/images/category/<?= $cat->image ?>" width="300" height="400" alt="" class="arrondie"></a>
-               <h4><a href="platcat.php?cat=<?= $cat->id;?>"><?= $cat->libelle; ?></h4><a></a>
+                <div class="card">
+                    <a href="platcat.php?cat=<?= $cat->id; ?>"> <img src="assets/images/category/<?= $cat->image ?>" width="300" height="300" alt="" class="arrondie"></a>
+                    <h4><a href="platcat.php?cat=<?= $cat->id; ?>"><?= $cat->libelle; ?><span class="ribbon">HOT</span></h4><a></a>
+
+                </div>
             </div>
         <?php
         endforeach;
@@ -58,15 +67,18 @@ include_once "Template/nav.php";
         <!-- plats -->
 
         <div class="col-md-12 col-sm-12">
-            <h1 class="h1 titre-index">Plats :</h1>
+        <h1 class="animate__animated animate__bounceInLeft">Plats Populaires :</h1>
         </div>
 
         <?php foreach ($plats as $plat) :
         ?>
             <div class="col-3 my-2 mx-auto">
-            <a href="platcat.php?cat=<?= $plat->id_categorie;?>"><img src="assets/images/food/<?= $plat->image ?>" width="300" height="400" alt="" class="arrondie"></a>
-            <h4><?= $plat->libelle; ?></h4>
-        </div>
+            <div class="card">
+                <a href="platcat.php?cat=<?= $plat->id_categorie; ?>"><img src="assets/images/food/<?= $plat->image ?>" width="300" height="300" alt="" class="arrondie"></a>
+                <h4><a href="commande.php?id=<?= $plat->id; ?>"><?= $plat->libelle; ?><span class="ribbon">HOT</span></h4><a></a>
+
+            </div>
+            </div>
         <?php
         endforeach;
         ?>

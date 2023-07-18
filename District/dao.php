@@ -37,7 +37,7 @@ function getPlat()
 {
     $db = connexionBase();
 
-    $plat = $db->query("SELECT `id_categorie`, `libelle`,`image`, SUM(`quantite`) 
+    $plat = $db->query("SELECT plat.id,`id_categorie`, `libelle`,`image`, SUM(`quantite`) 
         FROM `plat` 
         JOIN commande ON plat.id = commande.id_plat
          GROUP BY `libelle`ORDER BY SUM(`quantite`) DESC LIMIT 3;");
@@ -174,7 +174,8 @@ function getRecherchecat($libelle)
 }
 
 
-function getRechercheplat($libelle){
+function getRechercheplat($libelle)
+{
     $db = connexionBase();
 
     $platre = $db->prepare("SELECT * FROM `plat` WHERE `libelle` like :libelle OR `description` like :libelle");
@@ -182,5 +183,61 @@ function getRechercheplat($libelle){
     $platre->execute();
 
     return $platre->fetchAll(pdo::FETCH_ASSOC);
+}
 
+// -----------------------------------------------------------------gestion_cat.php
+
+function getCatgest()
+{
+
+    $db = connexionBase();
+
+    $catg = $db->prepare("SELECT * FROM `categorie`");
+    $catg->execute();
+
+    return $catg->fetchAll((pdo::FETCH_OBJ));
+}
+
+
+
+// -----------------------------------------------------------------cat_form.php
+
+
+function getModifcat($id){
+
+    $db = connexionBase();
+
+    $modctg = $db->prepare("SELECT * FROM `categorie` WHERE `id`=:id;");
+    $modctg->bindValue(":id", $id, PDO::PARAM_INT);
+    $modctg->execute();
+
+    return $modctg->fetchAll((pdo::FETCH_OBJ));
+}
+
+// -----------------------------------------------------------------gestion_plat.php
+
+
+function getPlatgest()
+{
+
+    $db = connexionBase();
+
+    $platgest = $db->prepare("SELECT * FROM `plat`");
+    $platgest->execute();
+
+    return $platgest->fetchAll((pdo::FETCH_OBJ));
+}
+
+
+// -----------------------------------------------------------------plat_form.php
+
+function getModifplat($id){
+
+    $db = connexionBase();
+
+    $modplat = $db->prepare("SELECT * FROM `plat` WHERE `id`=:id;");
+    $modplat->bindValue(":id", $id, PDO::PARAM_INT);
+    $modplat->execute();
+
+    return $modplat->fetchAll((pdo::FETCH_OBJ));
 }

@@ -27,27 +27,28 @@ include_once "Template/nav.php";
         <img class="promos" src="assets/images/bg2-modified.png" alt="district" title="district" width="1800" height="300" />
     </div>
     
-    <div class="col-4 my-4 mx-auto border border-light">
+    <div class="col-4 my-4 mx-auto">
         <nav class="navbar navbar-light ">
-            <a class="navbar-brand connecter">Se Connecter</a>
+            <h2>Se Connecter</h2>
         </nav>
         <link rel="stylesheet" href="assets/css/style.css">
 
         <form method="post" action="../script/login_script.php">
+            
         <div class="input-group ">
-                <label>Username : </label>
+                <h4>Email: </h4>
                 <input type="text" required="required" name="username" value="">
             </div>
             <br>
             <div class="input-group my-5">
-                <label>Password : </label>
+                <h4>Password : </h4>
                 <input type="password" required="required" name="password">
             </div>
 
             <button type="submit" class="btn btn-outline-light">Se connecter</button>
             <a href="" class="btn btn-outline-light">Retour</a>
         </form>
-        <img class="trans" src="assets/images/the_district_brand/logo_transparent.png" alt="trans" title="trans" width="400" height="400" />
+        <img class="trans" src="assets/images/the_district_brand/logo_transparent.png" alt="trans" title="trans" width="200" height="200" />
     </div>
 
 

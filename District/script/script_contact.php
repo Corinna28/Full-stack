@@ -2,7 +2,7 @@
 session_start();
 
 // on importe le contenu du fichier "db.php"
-include('dao.php');
+include('../dao.php');
 
 require_once '../vendor/autoload.php';
 
@@ -87,7 +87,6 @@ if (is_null($nom) || is_null($prenom)|| is_null($email)  || is_null($telephone) 
 }
 
 // Si la vérification des données est ok :
-include "../db.php";
 $db = connexionBase();
 
 try {

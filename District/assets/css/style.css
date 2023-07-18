@@ -10,7 +10,7 @@ body {
     text-align: center;
     padding-top: 20px;
     width: 100%;
-    color: rgb(231, 226, 226);
+    color: rgb(7, 7, 7);
 }
 
 .container-commande,
@@ -18,9 +18,15 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
-
+.container_modifp{
+    color: azure;
+}
+.modif_cat{
+    color: azure;
+}
 .container-plats{
     text-align: center;
     
@@ -43,12 +49,21 @@ body {
 /* Couleur d'ecriture */
 
 p,
-h1,
-h4,
 h3 {
-    color: rgb(231, 226, 226);
+    color: rgb(14, 13, 13);
 }
 
+h1, h4,h5,th,td{
+    color: azure;
+}
+
+
+h2{
+    color: azure;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-variant: small-caps;
+    font-weight: 600;
+}
 /* contour image des presentations des plats et catégorie */
 .arrondie {
     border: 2px solid black;
@@ -148,15 +163,14 @@ h3 {
     }
 }
 
+/* gestion des categories */
+
+td,th{
+text-align: center;
+}
 
 
-
-
-
-/* essais page test */
-
-
-
+/* Contour card ( index catégorie )*/
 
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -186,3 +200,28 @@ h3 {
   .card button:hover {
     opacity: 0.7;
   }
+
+
+  /* CSS Ribbon index */
+
+.ribbon {
+  width: 60px;
+  font-size: 14px;
+  padding: 4px;
+  position: absolute;
+  right: -25px;
+  top: -12px;
+  text-align: center;
+  border-radius: 25px;
+  transform: rotate(20deg);
+  background-color: #da1233;
+  color: white;
+}
+
+.commande, .container-contact{
+    color: rgb(233, 233, 227);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-variant: small-caps;
+    font-weight: 900;
+    
+}

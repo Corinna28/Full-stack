@@ -27,7 +27,7 @@ include_once "Template/nav.php";
         <div class="container-fluid g-0">
             <div class="col-12">
 
-                <img src="assets/images/food/<?= $platcom->image; ?>" width="400" height="400" alt="" class="arrondie">
+                <img src="assets/images/food/<?= $platcom->image; ?>" width="300" height="300" alt="" class="arrondie">
                 <input type="hidden" required="required" name="libelle" value="<?= $platcom->libelle; ?>" /><h3><?= $platcom->libelle; ?></h3>
                 <h4><?= $platcom->prix; ?>&nbsp; €</h4>
 
@@ -35,7 +35,7 @@ include_once "Template/nav.php";
             </div>
 
             <div class="row container-commande">
-                <div class="col-5">
+                <div class="col-5 commande">
                     <label for="quantite">Quantité :</label>
                     <!-- id cacher pour avoir le id du plat concerne -->
                     <input id="id" name="id" value="<?= $platcom->id; ?>" type="hidden">
@@ -66,7 +66,7 @@ include_once "Template/nav.php";
             <br>
             <input type="hidden" value=<?= $platcom->id; ?> />
             <button type="submit" class="btn btn-outline-light">Commander</button>
-            <button type="submit" class="btn btn-outline-light">Annuler</button>
+            <button type="reset" class="btn btn-outline-light">Annuler</button>
             <hr>
         </div>
     </fieldset>
