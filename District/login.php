@@ -29,7 +29,7 @@ include_once "Template/nav.php";
     
     <div class="col-4 my-4 mx-auto">
         <nav class="navbar navbar-light ">
-            <h2>Se Connecter</h2>
+            <h2 class="animate__animated animate__bounceInLeft">Se Connecter</h2>
         </nav>
         <link rel="stylesheet" href="assets/css/style.css">
 

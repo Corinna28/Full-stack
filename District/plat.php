@@ -34,7 +34,7 @@ include_once "Template/nav.php";
         ?>
             <div class="col-4 container-plats">
             
-                <img src="assets/images/food/<?= $platall->image; ?>" width="300" height="300" alt="" class="arrondie">
+            <a href="commande.php?id=<?= $platall->id; ?>"><img src="assets/images/food/<?= $platall->image; ?>" width="300" height="300" alt="" class="arrondie"> </a>
                 <h4><?= $platall->libelle; ?></h4>
                 <h5><?= $platall->description; ?></h5>
                 <h4><?= $platall->prix; ?>€</h4>

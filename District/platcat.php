@@ -57,8 +57,8 @@ include_once "Template/nav.php";
         ?>
             <div class="col-4">
             <div class="card">
-                <img src="assets/images/food/<?= $Platcat->image; ?>" width="300" height="300" alt="" class="arrondie">
-                <h3><?= $Platcat->libelle ?></h3>
+            <a href="commande.php?id=<?= $Platcat->id; ?>"><img src="assets/images/food/<?= $Platcat->image; ?>" width="300" height="300" alt="" class="arrondie"></a>
+                <h3><a href="commande.php?id=<?= $Platcat->id; ?>"><?= $Platcat->libelle ?></h3></a>
                 <h6><?= $Platcat->description ?></h6>
                 <h3><?= $Platcat->prix ?> €</h3>
 

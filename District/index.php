@@ -74,9 +74,11 @@ include_once "Template/nav.php";
         ?>
             <div class="col-3 my-2 mx-auto">
             <div class="card">
-                <a href="platcat.php?cat=<?= $plat->id_categorie; ?>"><img src="assets/images/food/<?= $plat->image ?>" width="300" height="300" alt="" class="arrondie"></a>
+                <a href="commande.php?id=<?= $plat->id; ?>"><img src="assets/images/food/<?= $plat->image ?>" width="300" height="300" alt="" class="arrondie"></a>
                 <h4><a href="commande.php?id=<?= $plat->id; ?>"><?= $plat->libelle; ?><span class="ribbon">HOT</span></h4><a></a>
-
+                <a href="commande.php?id=<?= $plat->id; ?>">
+                <img src="assets/images/61d9831c482674000429052e.png" alt="" width="50" height="50" class="rounded-circle">
+                </a>
             </div>
             </div>
         <?php

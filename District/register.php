@@ -21,7 +21,7 @@ include_once "Template/nav.php";
 
     <div class="col-4 my-4 mx-auto">
         <nav class="navbar navbar-light ">
-            <h2>S'enregistrer</h2>
+            <h2 class="animate__animated animate__bounceInLeft">S'enregistrer</h2>
         </nav>
         <link rel="stylesheet" href="assets/css/style.css">
 
@@ -29,20 +29,20 @@ include_once "Template/nav.php";
 
             <div class="input-group my-2">
                 <h4>Nom Prénom : </h4>
-                <input type="text" required="required" name="nom_prenom" value="vdfkjghdf">
+                <input type="text" required="required" name="nom_prenom" value="">
             </div>
             <br>
             <div class="input-group my-2">
                 <h4>Email : </h4>
-                <input type="Email" required="required" name="email" value="coco@gmail.fr">
+                <input type="Email" required="required" name="email" value="">
             </div>
             <br>
             <div class="input-group my-2">
                 <h4>Password : </h4>
-                <input type="password" required="required" name="password" value="1245">
+                <input type="password" required="required" name="password" value="">
             </div>
 
-            <button type="submit" class="btn btn-outline-light">S'enregistrer'</button>
+            <button type="submit" class="btn btn-outline-light">S'enregistrer</button>
             <a href="" class="btn btn-outline-light">Retour</a>
         </form>
         <img class="trans" src="assets/images/the_district_brand/logo_transparent.png" alt="trans" title="trans" width="200" height="200" />

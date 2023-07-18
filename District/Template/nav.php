@@ -18,7 +18,7 @@
     <div class="nav justify-content-center" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.php">Accueil</a>
+          <a class="nav-link" aria-current="page" href="index.php">Accueil</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="categorie.php">Catégorie</a>
@@ -30,7 +30,7 @@
           <a class="nav-link" href="contact.php">Contact</a>
         </li>
 
-        <!-- gestion de la categorie gestion visible que pour l'admin -->
+        
    
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Gestion</a>

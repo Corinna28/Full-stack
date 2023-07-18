@@ -28,7 +28,7 @@ include_once "Template/nav.php";
             <div class="col-12">
 
                 <img src="assets/images/food/<?= $platcom->image; ?>" width="300" height="300" alt="" class="arrondie">
-                <input type="hidden" required="required" name="libelle" value="<?= $platcom->libelle; ?>" /><h3><?= $platcom->libelle; ?></h3>
+                <input type="hidden" required="required" name="libelle" value="<?= $platcom->libelle; ?>" /><h2><?= $platcom->libelle; ?></h2>
                 <h4><?= $platcom->prix; ?>&nbsp; €</h4>
 
                 <!-- &nbsp; L'espace insécable permet d'éviter qu'un mot, un ensemble de mots, un nombre, une date ou une ponctuation ne soient rejetés et isolés au début de la ligne suivante lorsque cela nuirait à la fluidité de la lecture. -->

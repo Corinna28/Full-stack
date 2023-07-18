@@ -21,10 +21,10 @@ include_once "Template/nav.php";
 <h1 class="animate__animated animate__bounceInLeft">Gestion des Catégories</h1>
 
 <?php if (isset($_SESSION['modification_reussi'])) : ?>
-        <h3> <?php echo ($_SESSION['modification_reussi']) ?></h3>
-        <!-- //on l'efface au rechargement de la page -->
-    <?php unset($_SESSION['modification_reussi']);
-    endif ?>
+    <h3> <?php echo ($_SESSION['modification_reussi']) ?></h3>
+    <!-- //on l'efface au rechargement de la page -->
+<?php unset($_SESSION['modification_reussi']);
+endif ?>
 
 <form action="script/script_delete_cat.php" id="formulaire" method="post" enctype="multipart/form-data">
     <div class="tableoverflow">
@@ -59,8 +59,6 @@ include_once "Template/nav.php";
             <?php
             endforeach;
             ?>
-
-
 
 
         </table>
