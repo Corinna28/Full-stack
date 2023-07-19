@@ -42,23 +42,23 @@ include_once "Template/nav.php";
                     <!-- on recupere le prix pour effectuer le total -->
                     <input type="hidden" name="prix" value="<?= $platcom->prix; ?>">
 
-                    <input type="number" required="required" class="form-control" name="quantite" value="1" placeholder="Quantité" min="1" max="20" />
+                    <input type="number" required="required" class="form-control" name="quantite" value="" placeholder="Quantité" min="1" max="20" />
                     <div class="form-group">
                         <label for="nom">Nom et Prénom:</label>
-                        <input type="text" required="required"  class="form-control" id="nom_prenom" name="nom_prenom" value="fournier" placeholder="Veuillez saisir votre nom et prénom">
+                        <input type="text" required="required"  class="form-control" id="nom_prenom" name="nom_prenom" value="" placeholder="Veuillez saisir votre nom et prénom">
                     </div>
                     <div class="form-group">
                         <label for="email">Email :</label>
-                        <input type="text" required="required" class="form-control" id="email" name="email" value="dave.loper@afpa.com" placeholder="dave.loper@afpa.com">
+                        <input type="text" required="required" class="form-control" id="email" name="email" value="" placeholder="dave.loper@afpa.com">
 
                     </div>
                     <div class="form-group">
                         <label for="telephone">Téléphone : </label>
-                        <input type="text" required="required" class="form-control" id="telephone" name="telephone" value="0322323232" placeholder="Veuillez indiquer votre numéro de télephone">
+                        <input type="text" required="required" class="form-control" id="telephone" name="telephone" value="" placeholder="Veuillez indiquer votre numéro de télephone">
                     </div>
                     <div class="form-group">
                         <label for="adresse">Adresse :</label>
-                        <input type="text" required="required" class="form-control" id="adresse" name="adresse" value="12 jfdk" placeholder="Veuillez saisir votre adresse">
+                        <input type="text" required="required" class="form-control" id="adresse" name="adresse" value="" placeholder="Veuillez saisir votre adresse">
                     </div>
                 </div>
 

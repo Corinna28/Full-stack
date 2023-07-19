@@ -8,7 +8,7 @@ $db = connexionBase();
 
 // requetes lancer via le dao
 
-$page = $_GET['page'];
+$page = isset($_GET['page'])?$_GET['page']:1;
 if ($page <= 0) {
     $page = 1;
 }

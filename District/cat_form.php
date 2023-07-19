@@ -23,7 +23,7 @@ include_once "Template/nav.php";
     <h1 class="animate__animated animate__bounceInLeft">Modification Catégorie</h1>
     <form action="script/script_mod_c.php" id="formulaire" name="formulaire" method="post" enctype="multipart/form-data">
         <fieldset>
-            <input type="hidden" name="id" value="<?= $id;?>">
+            <input type="hidden" name="id" value="<?= $id; ?>">
             <div class="row">
                 <?php foreach ($modctgs as $modctg) : ?>
                     <div class="col-md-6 mb-5 my-2">
@@ -37,7 +37,8 @@ include_once "Template/nav.php";
                             <!-- L'upload de fichier -->
                             <label for="image">Image : </label>
                             <br>
-
+                            <img src="assets/images/category/<?= $modctg->image; ?>" width="200" height="200" alt="" class="arrondie">
+                           
                             <input type="file" id="image" name="image" accept="image/png, image/jpeg"></input>
 
 

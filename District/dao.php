@@ -55,6 +55,8 @@ function getCatdiver($limit, $offset)
     $catdiver = $db->prepare("SELECT categorie.libelle, categorie.image, categorie.active, categorie.id  FROM categorie WHERE categorie.active= 'Yes' LIMIT :limit OFFSET :offset;");
 
     //    variable pour la pagination
+$limit = (int) $limit;
+$offset = (int) $offset;
 
     $catdiver->bindValue(':limit', $limit, pdo::PARAM_INT);
     $catdiver->bindValue(':offset', $offset, pdo::PARAM_INT);

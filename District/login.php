@@ -30,6 +30,7 @@ include_once "Template/nav.php";
     <div class="col-4 my-4 mx-auto">
         <nav class="navbar navbar-light ">
             <h2 class="animate__animated animate__bounceInLeft">Se Connecter</h2>
+            
         </nav>
         <link rel="stylesheet" href="assets/css/style.css">
 
@@ -48,7 +49,7 @@ include_once "Template/nav.php";
             <button type="submit" class="btn btn-outline-light">Se connecter</button>
             <a href="" class="btn btn-outline-light">Retour</a>
         </form>
-        <img class="trans" src="assets/images/the_district_brand/logo_transparent.png" alt="trans" title="trans" width="200" height="200" />
+        <img class="trans" src="assets/images/the_district_brand/logo_transparent.png" alt="trans" title="trans" width="100" height="100" />
     </div>
 
 

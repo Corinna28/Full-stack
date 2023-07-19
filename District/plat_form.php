@@ -52,7 +52,7 @@ include_once "Template/nav.php";
                             <!-- L'upload de fichier -->
                             <label for="image">Image : </label>
                             <br>
-
+                            <img src="assets/images/food/<?= $modplat->image; ?>" width="200" height="200" alt="" class="arrondie">
                             <input type="file" id="image" name="image" accept="image/png, image/jpeg"></input>
 
 
