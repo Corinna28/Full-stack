@@ -43,7 +43,7 @@ include_once "Template/nav.php";
     <div class="row">
         <!-- catégorie -->
 
-        <div class="col-md-12 col-sm-12">
+        <div class="col-lg-12 col-sm-12">
             <h1 class="animate__animated animate__bounceInLeft">Catégories Populaires :</h1>
         </div>
         <?php foreach ($cats as $cat) :
@@ -66,7 +66,7 @@ include_once "Template/nav.php";
 
         <!-- plats -->
 
-        <div class="col-md-12 col-sm-12">
+        <div class="col-lg-12 col-sm-12">
         <h1 class="animate__animated animate__bounceInLeft">Plats Populaires :</h1>
         </div>
 

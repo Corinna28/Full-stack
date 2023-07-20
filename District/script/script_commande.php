@@ -6,7 +6,7 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
 // Récupération des valeurs :
-$id = (isset($_POST['id']) && $_POST['id'] != "") ? intval($_POST['id']) : Null;
+$id_plat = (isset($_POST['id']) && $_POST['id'] != "") ? intval($_POST['id']) : Null;
 // le intval donne les entiers voir dans la structure de la base de donnee et dans le "type" 
 $libelle = (isset($_POST['libelle']) && $_POST['libelle']!= "") ? $_POST['libelle'] : Null;
 $quantite = (isset($_POST['quantite']) && $_POST['quantite'] != "") ? intval($_POST['quantite']) : Null;
@@ -76,7 +76,7 @@ if ($mail) {
 
 
 // En cas d'erreur, on renvoie vers le formulaire
-if (is_null($id) || is_null($libelle)|| is_null($quantite) || is_null($prix) || is_null($nom_prenom) || is_null($email)  || is_null($telephone)  || is_null($adresse)) {
+if (is_null($id_plat) || is_null($libelle)|| is_null($quantite) || is_null($prix) || is_null($nom_prenom) || is_null($email)  || is_null($telephone)  || is_null($adresse)) {
     // if ($id == Null || $quantite == Null || $prix == Null || $nom_prenom == Null || $email == Null  || $telephone == Null  || $adresse == Null) {
     header("Location: ../commande.php?id=" . $id);
 }
@@ -87,9 +87,10 @@ include "../db.php";
 $db = connexionBase();
 $total = $quantite * $prix;
 try {
+    $id=20;
     // Construction de la requête UPDATE sans injection SQL :
     $req = "INSERT INTO `commande`
- (`id_plat`, `quantite`, `total`, `date_commande`, `etat`,`nom_client`, `telephone_client`, `email_client`, `adresse_client`) 
+ (`id`,`id_plat`, `quantite`, `total`, `date_commande`, `etat`,`nom_client`, `telephone_client`, `email_client`, `adresse_client`) 
      VALUES (:id_plat, :quantite, :prix, NOW(), :etat, :nom_prenom, :telephone, :email, :adresse)";
     //  var_dump($req);
     $requete = $db->prepare($req);
@@ -97,7 +98,8 @@ try {
 
 
     // Association des valeurs aux paramètres via bindValue() 
-    $requete->bindValue(":id_plat", $id, PDO::PARAM_INT);
+    $requete->bindValue(":id", $id, PDO::PARAM_INT);
+    $requete->bindValue(":id_plat", $id_plat, PDO::PARAM_INT);
     $requete->bindValue(":quantite", $quantite, PDO::PARAM_INT);
     $requete->bindValue(":prix", $total, PDO::PARAM_STR);
     $requete->bindValue(":etat", $etat, PDO::PARAM_STR);

@@ -25,7 +25,7 @@ include_once "Template/nav.php";
 
     <div class="row ">
         <!-- catégorie -->
-        <div class="col-md-12 col-sm-12">
+        <div class="col-lg-12 col-sm-12">
         <h1 class="animate__animated animate__bounceInLeft">Plats :</h1>
         </div>
 
